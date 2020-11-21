@@ -1,7 +1,7 @@
 article author title year journal
-livre author/editor title publisher year
+livre authoreditor title publisher year
 petit_livre title
-chapitre author/editor title chapter/pages
+chapitre authoreditor title chapter/pages
 documentation title
 memoire author title school year
-autre author/title/howpublished/year/note
+autre authortitlehowpublishedyearnote
