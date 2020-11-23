@@ -61,4 +61,4 @@ do
 	fi
 done
 rm tmp
-echo -e $ecrire
+echo -e $ecrire >> bd.bib
