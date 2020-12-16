@@ -6,17 +6,15 @@ read nomfic
 LecRef="n"
 while read ligne
 do
-	echo "_"$ligne"_"
-	[[ $ligne == *"<reference>"* ]] & { LecRef="o"; echo '@Article {' >> testimport.bib; }
-	[[ $ligne == *"</reference>"* ]] & { LecRef="n"; echo '}' >> testimport.bib; }
-	echo $LecRef
+	[[ $ligne == "<reference>" ]] && { LecRef="o"; echo '@Article {' >> bd.bib; continue; }
+	[[ $ligne == *"</reference>" ]] && { LecRef="n"; echo '}' >> bd.bib; continue; }
 	if [[ $LecRef == "o" ]]; then
-		echo "ligne"
 		contenu=`echo $ligne | tr "<>" " "`
 		IFS="/"
 		set $contenu
 		contenu=$1
-		echo $contenu | sed "s/ //" | sed "s/ /=/" >> testimport.bib
+		echo $contenu | sed "s/ //" | sed "s/ /=\"/" | sed "s/$/\"/g" >> bd.bib
+		IFS=" "
 	fi
 done < $nomfic
 IFS=" "
