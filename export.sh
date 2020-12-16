@@ -51,6 +51,7 @@ do
 	echo "1. Vers un .txt"
 	echo "2. Vers un .pdf (en passant par un fichier LaTeX, nécessite pdflatex)"
 	echo "3. Vers un .html"
+	echo "4. Quitter"
 	read choix
 	dateExport=`date +"%Y%m%d_%Hh%Mm%S"`
 	if [[ $choix == *1* ]]; then
@@ -61,5 +62,8 @@ do
 	fi
 	if [[ $choix == *3* ]]; then
 		exportHtml $dateExport
+	fi
+	if [[ $choix == 4 ]]; then
+		continuer="n"
 	fi
 done

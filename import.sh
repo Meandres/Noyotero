@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Importation depuis un fichier .xml (nécessite libxml-xpath-perl)"
+echo "Importation depuis un fichier .xml"
 echo "Entrez le nom du fichier depuis lequel vous voulez importer les references : (sans l'extension)"
 read nomfic
 LecRef="n"
