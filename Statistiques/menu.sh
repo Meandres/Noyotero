@@ -16,8 +16,16 @@ do
 			./nombreParType.awk
 		;;
 		"Le nombre de références sur une période")
-			./nombreSurPeriode.awk
-			./periodeAvecGraphe.sh
+			read -p 'Donnez l''année inférieur : ' n1
+			if [[ "$n1" =~ ^[0-9]+$ ]] ; 
+ 			then 	export n1
+				read -p 'Donnez l''année supérieur : ' n2
+				if [[ "$n2" =~ ^[0-9]+$ ]] ; 
+ 				then	export n2
+					./nombreSurPeriode.awk
+					./periodeAvecGraphe.sh
+				fi
+			fi
 		;;
 		"Les types de références disponibles")
 			./typeReference.awk
