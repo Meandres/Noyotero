@@ -1,0 +1,45 @@
+@a{Yes2000,
+	publisher = {Pearson Education},
+	author = {Larman, Craig},
+	year = {2005},
+}
+@b{No2000,
+	publisher = {Pearson Education},
+	author = {Martin, Kevin},
+	year = {2008},
+}
+@b{CDROM2000,
+	publisher = {Pearson Education},
+	author = {Larman, Craig},
+	year = {2001},
+}
+@a{ABC2000,
+	publisher = {Pearson Education},
+	author = {Martin, Luck},
+	year = {2005},
+}
+@a{Gagne2000,
+	publisher = {Montgomery},
+	author = {De Balzac, Honore},
+	year = {2006},
+}
+@c{Perdu2000,
+	publisher = {Pathe},
+	author = {Larman, Craig},
+	year = {2007},
+}
+@c{Jean2000,
+	publisher = {Pearson Education},
+	author = {De Balzac, Honore},
+	year = {2008},
+}
+@c{Lacrim2000,
+	publisher = {Pearson Education},
+	author = {Martin, Kevin},
+	year = {2003},
+}
+@a{Francois2000,
+	publisher = {Pathe},
+	author = {Larman, Craig},
+	year = {2008},
+}
