@@ -16,10 +16,10 @@ do
 			./nombreParType.awk
 		;;
 		"Le nombre de références sur une période")
-			read -p 'Donnez l''année inférieur : ' n1
+			read -p 'Donnez l`année inférieur : ' n1
 			if [[ "$n1" =~ ^[0-9]+$ ]] ; 
  			then 	export n1
-				read -p 'Donnez l''année supérieur : ' n2
+				read -p 'Donnez l`année supérieur : ' n2
 				if [[ "$n2" =~ ^[0-9]+$ ]] ; 
  				then	export n2
 					./nombreSurPeriode.awk
