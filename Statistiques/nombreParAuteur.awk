@@ -1,2 +1,2 @@
-awk	'BEGIN {FS = "[{()}]"}
-	/author = / {print $2}' test | sort | uniq -c
+awk -v a="$nomfich"	'BEGIN {FS = "[{()}]"}
+	/author = / {print $2}' $nomfich | sort | uniq -c

@@ -1,2 +1,2 @@
 awk	'BEGIN {FS = "[{()}]"}
-	/publisher = / {print $2}' test | sort | uniq -c
+	/publisher = / {print $2}' $nomfich | sort | uniq -c

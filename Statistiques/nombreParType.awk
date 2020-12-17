@@ -1,2 +1,2 @@
 awk	'BEGIN {FS = "[{()}]"}
-	/^@/ {print $1}' test | sort | uniq -c
+	/^@/ {print $1}' $nomfich | sort | uniq -c

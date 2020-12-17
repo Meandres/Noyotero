@@ -1,19 +1,20 @@
 #!/bin/bash
 
-choix=("Le nombre de références par auteur" "Le nombre de références par éditeur" "Le nombre de références par type" "Le nombre de références sur une période" "Les types de références disponibles" "Quit")
-
+choix=("Le nombre de références par auteur" "Le nombre de références par éditeur" "Le nombre de références par type" "Le nombre de références sur une période" "Les types de références disponibles" "Choix du fichier" "Quitter")
+nomfich="fichier"
+export nomfich
 PS3='Choisissez une option : '
 select script in "${choix[@]}"
 do
 	case $script in
 		"Le nombre de références par auteur")
-			./nombreParAuteur.awk
+			./Statistiques/nombreParAuteur.awk
 		;;
 		"Le nombre de références par éditeur")
-			./nombreParEditeur.awk
+			./Statistiques/nombreParEditeur.awk
 		;;
 		"Le nombre de références par type")
-			./nombreParType.awk
+			./Statistiques/nombreParType.awk
 		;;
 		"Le nombre de références sur une période")
 			read -p 'Donnez l`année inférieur : ' n1
@@ -22,15 +23,19 @@ do
 				read -p 'Donnez l`année supérieur : ' n2
 				if [[ "$n2" =~ ^[0-9]+$ ]] ; 
  				then	export n2
-					./nombreSurPeriode.awk
-					./periodeAvecGraphe.sh
+					./Statistiques/nombreSurPeriode.awk
+					./Statistiques/periodeAvecGraphe.sh
 				fi
 			fi
 		;;
 		"Les types de références disponibles")
-			./typeReference.awk
+			./Statistiques/typeReference.awk
 		;;
-		"Quit")
+		"Choix du fichier")
+			read -p 'Donnez le nom du fichier à utiliser : ' nomfich
+			export nomfich
+		;;
+		"Quitter")
 			break
 		;;
 		*) echo "Erreur, le choix n°$REPLY est erroné"
