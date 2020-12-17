@@ -32,7 +32,8 @@ do
 			./Statistiques/menu.sh
 		;;
 		"7")
-			exit 0;
+			exit 0
+		;;
 		*)
 	esac
 done
